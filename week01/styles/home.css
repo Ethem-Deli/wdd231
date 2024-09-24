@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 150px; /* Updated width for better scaling */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; /* Add gap for spacing between items */
+}
+
+nav ul li {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.hero {
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px; /* Add padding to center content */
+}
+
+.hero-content {
+    max-width: 100%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+main {
+    padding: 20px; /* Add padding for spacing */
+}
+
+.info-panels {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add gap for spacing */
+    margin: 20px 0;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+    border: 1px solid #ccc; /* Add border to match the mockup */
+}
+
+.weather ul {
+    padding-left: 20px;
+}
+
+.business-spotlights {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add gap for better spacing */
+    margin: 20px 0;
+}
+
+.business {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc; /* Add border for better structure */
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* New Footer Styles */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-business {
+    text-align: left;
+    flex: 1;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.footer-right {
+    text-align: right;
+    flex: 1;
+}
+
+.social-icons img {
+    width: 30px;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 100px; /* Adjust logo size for mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    .info-panels {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .panel {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .business-spotlights {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .social-icons img {
+        width: 25px;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}
+
+/* Media Query for Desktop Devices */
+@media only screen and (min-width: 769px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .info-panels {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .business-spotlights {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+}
