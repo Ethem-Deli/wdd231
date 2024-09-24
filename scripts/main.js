@@ -57,10 +57,10 @@ filterButtons.wdd.addEventListener("click", () => displayCourses("WDD"));
 // Initial load of all courses
 displayCourses();
 
-// Hamburger Menu Toggle
-const hamburger = document.querySelector(".hamburger");
-const navUl = document.querySelector("nav ul");
+// Hamburger menu toggle for mobile view
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
 
-hamburger.addEventListener("click", () => {
-    navUl.classList.toggle("mobile-menu");
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });

@@ -92,20 +92,28 @@ main {
 
 /* Ensure the certificate section spans full width and is centered below other sections */
 .certificate {
-    grid-column: 1 / span 2; /* Make it span both columns */
-    justify-self: center;    /* Center horizontally */
-    width: 80%;              /* Control the width for a better layout */
-    margin-top: 40px;        /* Add some space above it */
+    grid-column: 1 / span 2;
+    /* Make it span both columns */
+    justify-self: center;
+    /* Center horizontally */
+    width: 80%;
+    /* Control the width for a better layout */
+    margin-top: 40px;
+    /* Add some space above it */
 }
 
-.coursework, .toloria, .certificate {
+.coursework,
+.toloria,
+.certificate {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.coursework h2, .toloria h2, .certificate h2 {
+.coursework h2,
+.toloria h2,
+.certificate h2 {
     margin-bottom: 10px;
 }
 
@@ -146,8 +154,10 @@ nav ul {
     }
 
     .certificate {
-        grid-column: 1 / span 1; /* To ensure full width in mobile view */
-        width: 100%;             /* Full width on small screens */
+        grid-column: 1 / span 1;
+        /* To ensure full width in mobile view */
+        width: 100%;
+        /* Full width on small screens */
         margin-top: 20px;
     }
 }
