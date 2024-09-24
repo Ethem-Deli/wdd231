@@ -35,32 +35,45 @@ function displayCourses(filter = "all") {
 
     filteredCourses.forEach(course => {
         const courseCard = document.createElement("div");
-        courseCard.classList.add("course-card");
-
+        courseCard.className = "course-card";
+        courseCard.innerHTML = `
+            <h3>${course.code}: ${course.name}</h3>
+            <p>Credits: ${course.credits}</p>
+        `;
         if (course.completed) {
             courseCard.classList.add("completed");
+            courseCard.innerHTML += `<p>Status: Completed</p>`;
+        } else {
+            courseCard.innerHTML += `<p>Status: Not Completed</p>`;
         }
-
-        courseCard.innerHTML = `
-            <h3>${course.code}</h3>
-            <p>${course.name}</p>
-        `;
         coursesContainer.appendChild(courseCard);
     });
+
+    // Update total credits
+    const totalCredits = filteredCourses.reduce((acc, course) => acc + course.credits, 0);
+    document.getElementById("total-credits").textContent = `Total Credits: ${totalCredits}`;
 }
 
-// Event Listeners for filtering courses
+// Event Listeners for Filters
 filterButtons.all.addEventListener("click", () => displayCourses("all"));
 filterButtons.cse.addEventListener("click", () => displayCourses("CSE"));
 filterButtons.wdd.addEventListener("click", () => displayCourses("WDD"));
 
-// Initial load of all courses
-displayCourses();
+// Initially display all courses
+displayCourses("all");
 
-// Hamburger menu toggle for mobile view
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('navMenu');
+// Hamburger Menu functionality
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("mobile-menu");
+});
+
+// Highlight active link
+navMenu.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
+        navMenu.querySelectorAll("a").forEach(link => link.classList.remove("active"));
+        e.target.classList.add("active");
+    }
 });

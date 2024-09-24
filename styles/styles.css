@@ -43,6 +43,13 @@ nav ul {
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 5px 10px; /* Added padding for better clickability */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for menu items */
+nav ul li a:hover, nav ul li a.active {
+    background-color: rgba(255, 204, 0, 0.3); /* Highlight active or hovered item */
 }
 
 /* Hamburger Menu Styles */
@@ -96,7 +103,6 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: 20px;
 }
 
 /* Ensure the certificate section spans full width and is centered below other sections */
@@ -166,4 +172,3 @@ nav ul {
         margin-top: 20px;
     }
 }
-/*___*/
