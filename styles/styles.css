@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #006699;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header img.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #006699;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Ensure the certificate section spans full width and is centered below other sections */
+.certificate {
+    grid-column: 1 / span 2; /* Make it span both columns */
+    justify-self: center;    /* Center horizontally */
+    width: 80%;              /* Control the width for a better layout */
+    margin-top: 40px;        /* Add some space above it */
+}
+
+.coursework, .toloria, .certificate {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.coursework h2, .toloria h2, .certificate h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #006699;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Navigation */
+nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.course-filters button {
+    background-color: #006699;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.course-filters button:hover {
+    background-color: #004466;
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate {
+        grid-column: 1 / span 1; /* To ensure full width in mobile view */
+        width: 100%;             /* Full width on small screens */
+        margin-top: 20px;
+    }
+}
