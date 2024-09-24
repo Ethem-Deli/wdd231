@@ -20,17 +20,17 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <img src="images/profile_image.jpg" alt="Ethem Deli" class="profile-img">
-        <h1>Ethem Deli</h1>
+        <h1 id="site-title">Ethem Deli</h1>
         <nav>
-            <ul>
+            <ul id="navMenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Chamber</a></li>
                 <li><a href="#">GitHub Profile</a></li>
                 <li><a href="#">LinkedIn</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -39,7 +39,7 @@
     </header>
 
     <main>
-        <section class="coursework">
+        <section class="coursework" id="coursework">
             <h2>Course Work</h2>
             <ul>
                 <li></li>
@@ -48,29 +48,30 @@
             </ul>
         </section>
 
-        <section class="toloria">
+        <section class="toloria" id="location-section">
             <h2>Doha, Qatar</h2>
-            <img src="images/sand_dunes.jpg" alt="Sand Dunes">
+            <img src="images/sand_dunes.jpg" alt="Sand Dunes" id="location-image">
             <p>Sand Dunes</p>
         </section>
 
-        <section class="certificate">
+        <section class="certificate" id="certificate-section">
             <h2>Web and Computer Programming Certificate</h2>
-            <div class="course-filters">
+            <div class="course-filters" id="course-filters">
                 <button id="filter-all">All</button>
                 <button id="filter-cse">CSE</button>
                 <button id="filter-wdd">WDD</button>
             </div>
-            <div class="courses">
+            <div class="courses" id="courses">
                 <!-- Dynamically Generated Course Cards -->
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer id="footer">
         <p>&copy; <span id="currentyear"></span> Ethem Deli | Qatar</p>
         <p id="lastModified"></p>
     </footer>
 </body>
 
 </html>
+<!--___-->
