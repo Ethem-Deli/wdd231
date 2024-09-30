@@ -171,14 +171,6 @@ main {
     /* Slightly reduced opacity for list view */
 }
 
-/* Ensure the buttons stay visible on smaller screens */
-@media (max-width: 768px) {
-    #business-directory {
-        grid-template-columns: 1fr;
-        margin-top: 2rem;
-        /* Adjust margin for smaller screens */
-    }
-}
 
 /* Footer Styles */
 footer {
