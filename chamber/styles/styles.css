@@ -17,7 +17,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    z-index: 100; /* Ensure the header is on top */
+    z-index: 100;
+    /* Ensure the header is on top */
     position: relative;
 }
 
@@ -115,7 +116,8 @@ main {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem; /* Add space below the view buttons */
+    margin-bottom: 2rem;
+    /* Add space below the view buttons */
 }
 
 /* Spacing between the buttons and the business cards */
@@ -123,8 +125,10 @@ main {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
-    transition: all 0.5s ease; /* Add smooth transition for layout change */
-    margin-top: 3rem; /* Add space between the buttons and the business cards */
+    transition: all 0.5s ease;
+    /* Add smooth transition for layout change */
+    margin-top: 3rem;
+    /* Add space between the buttons and the business cards */
 }
 
 .list-view #business-directory {
@@ -140,7 +144,8 @@ main {
     border: 1px solid #ccc;
     padding: 1rem;
     text-align: center;
-    transition: all 0.3s ease; /* Transition for box adjustments */
+    transition: all 0.3s ease;
+    /* Transition for box adjustments */
 }
 
 .grid-view .business-card img {
@@ -160,15 +165,18 @@ main {
 }
 
 .list-view .business-card {
-    transform: scale(1.1); /* Slight enlargement for list view */
-    opacity: 0.9; /* Slightly reduced opacity for list view */
+    transform: scale(1.1);
+    /* Slight enlargement for list view */
+    opacity: 0.9;
+    /* Slightly reduced opacity for list view */
 }
 
 /* Ensure the buttons stay visible on smaller screens */
 @media (max-width: 768px) {
     #business-directory {
         grid-template-columns: 1fr;
-        margin-top: 2rem; /* Adjust margin for smaller screens */
+        margin-top: 2rem;
+        /* Adjust margin for smaller screens */
     }
 }
 
@@ -188,7 +196,8 @@ footer .social-icons img {
 /* Responsive Styles for Mobile View */
 @media (max-width: 768px) {
     #business-directory {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for mobile view */
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns for mobile view */
         gap: 1rem;
     }
 }
