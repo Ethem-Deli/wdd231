@@ -1,5 +1,3 @@
-/* Normalize CSS or Reset CSS would go here if you're using one */
-
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
@@ -22,6 +20,17 @@ header {
     position: relative;
 }
 
+/* Pseudo-element for header decoration */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #ffcc00; /* Adds a decorative top border */
+}
+
 header img {
     height: 50px;
 }
@@ -36,6 +45,7 @@ nav ul {
 
 nav ul li {
     margin: 0;
+    position: relative;
 }
 
 nav ul li a {
@@ -45,6 +55,21 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Pseudo-element for hover effect on navigation links */
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    /* Adds a yellow underline effect when hovered */
 }
 
 /* Hamburger Menu Styling */
@@ -111,6 +136,15 @@ main {
     padding: 2rem;
 }
 
+/* Pseudo-element for the main section's heading */
+main h1::before {
+    content: "📂 ";
+    /* Decorative icon before the heading */
+    color: #333;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
 /* Add some spacing between the view buttons and the business directory */
 #view-buttons {
     display: flex;
@@ -118,6 +152,14 @@ main {
     gap: 1rem;
     margin-bottom: 2rem;
     /* Add space below the view buttons */
+}
+
+/* Pseudo-element for buttons */
+#view-buttons button::after {
+    content: ' ▾';
+    /* Adds a dropdown arrow after button text */
+    font-size: 0.8rem;
+    color: #333;
 }
 
 /* Spacing between the buttons and the business cards */
@@ -137,6 +179,14 @@ main {
 
 .grid-view #business-directory {
     grid-template-columns: repeat(3, 1fr);
+}
+
+/* Pseudo-element for business cards */
+.business-card::before {
+    content: '🌟 ';
+    /* Adds a star icon before the business card content */
+    font-size: 1.5rem;
+    display: block;
 }
 
 .business-card {
@@ -186,9 +236,37 @@ footer {
     color: white;
     padding: 1rem;
     text-align: center;
+    position: relative;
 }
 
-footer .social-icons img {
+footer::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #ffcc00;
+    /* Decorative footer highlight */
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons a img {
+    height: 24px;
     width: 24px;
-    margin: 0 10px;
+}
+
+/* Dynamic Year and Last Modified */
+#year::before {
+    content: "© ";
 }
