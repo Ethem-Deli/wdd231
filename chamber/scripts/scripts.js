@@ -1,4 +1,5 @@
 // Sample business data for Qatar
+
 const businesses = [
     {
         name: "Qatar Airways",
