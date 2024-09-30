@@ -65,10 +65,14 @@ nav ul li a:hover {
 }
 
 /* Show Hamburger Menu on Smaller Screens */
+/* Responsive Styles for Mobile View */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
+    #business-directory {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns for mobile view */
+        gap: 1rem;
     }
+
 
     nav ul {
         position: fixed;
@@ -183,13 +187,4 @@ footer {
 footer .social-icons img {
     width: 24px;
     margin: 0 10px;
-}
-
-/* Responsive Styles for Mobile View */
-@media (max-width: 768px) {
-    #business-directory {
-        grid-template-columns: repeat(2, 1fr);
-        /* Two columns for mobile view */
-        gap: 1rem;
-    }
 }
