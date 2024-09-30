@@ -1,98 +1,32 @@
-// Sample business data for Qatar
-const businesses = [
-    {
-        name: "Qatar Airways",
-        description: "Leading global airline from Qatar.",
-        logo: "images/qatarair.png",
-        detailsLink: "https://www.qatarairways.com"
-    },
-    {
-        name: "Qatar National Bank",
-        description: "Largest bank in Qatar.",
-        logo: "images/qnb.png",
-        detailsLink: "https://www.qnb.com"
-    },
-    {
-        name: "Ooredoo Qatar",
-        description: "Telecommunications company.",
-        logo: "images/ooredoo.png",
-        detailsLink: "https://www.ooredoo.qa"
-    },
-    {
-        name: "Al Jazeera",
-        description: "International news network.",
-        logo: "images/aljazeera.png",
-        detailsLink: "https://www.aljazeera.com"
-    },
-    {
-        name: "Vodafone Qatar",
-        description: "Telecommunication provider.",
-        logo: "images/vodafone-qatar.png",
-        detailsLink: "https://www.vodafone.qa"
-    },
-    {
-        name: "Aspire Zone",
-        description: "Sports development company.",
-        logo: "images/aspire.png",
-        detailsLink: "https://www.aspirezone.qa"
-    },
-    {
-        name: "Qatar Petroleum",
-        description: "National oil company of Qatar.",
-        logo: "images/qatar-petroleum.png",
-        detailsLink: "https://www.qp.com.qa"
-    },
-    {
-        name: "Doha Bank",
-        description: "Commercial bank in Qatar.",
-        logo: "images/doha-bank.png",
-        detailsLink: "https://www.dohabank.com.qa"
-    },
-    {
-        name: "Katara",
-        description: "Cultural village in Doha.",
-        logo: "images/katara.jpeg",
-        detailsLink: "https://www.katara.net"
-    }
-];
-async function loadBusinessCards(viewType) {
-    const directory = document.getElementById('business-directory');
-    directory.innerHTML = ''; // Clear existing content
-
+// Fetch business data from members.json
+async function fetchMembers() {
     try {
         const response = await fetch('members.json');
-        const businesses = await response.json();
-
-        businesses.forEach(business => {
-            const card = document.createElement('div');
-            card.classList.add('business-card');
-            card.innerHTML = `
-                <img src="images/${business.image}" alt="${business.name} logo">
-                <h2>${business.name}</h2>
-                <p>${business.tagline}</p>
-                <p>${business.address}</p>
-                <p>${business.phone}</p>
-                <a href="${business.website}" target="_blank">Learn More</a>
-            `;
-            directory.appendChild(card);
-        });
+        const members = await response.json();
+        return members;
     } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching members:', error);
+        return [];
     }
 }
 
+
 // Function to load business cards
-function loadBusinessCards(viewType) {
+async function loadBusinessCards(viewType) {
+    const members = await fetchMembers(); // Fetch the data from the JSON file
     const directory = document.getElementById('business-directory');
     directory.innerHTML = ''; // Clear existing content
-    businesses.forEach(business => {
+
+    members.forEach(member => {
         const card = document.createElement('div');
         card.classList.add('business-card');
         card.innerHTML = `
-            <img src="${business.logo}" alt="${business.name} logo">
-            <h2>${business.name}</h2>
-            <p>${business.description}</p>
-            <a href="${business.detailsLink}" target="_blank">Learn More</a>
+            <img src="images/${member.image}" alt="${member.name} logo">
+            <h2>${member.name}</h2>
+            <p>${member.tagline || ''}</p>
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <a href="${member.website}" target="_blank">Learn More</a>
         `;
         directory.appendChild(card);
     });
