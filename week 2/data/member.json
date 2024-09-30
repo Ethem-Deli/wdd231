@@ -1,0 +1,94 @@
+[
+    {
+        "name": "Qatar Airways",
+        "tagline": "The World's 5-Star Airline",
+        "address": "P.O. Box 22550, Doha, Qatar",
+        "phone": "4423-0000",
+        "email": "info@qatarairways.com",
+        "website": "http://www.qatarairways.com",
+        "image": "qatar-airways-logo.png",
+        "membership": 1
+    },
+    {
+        "name": "Qatar National Bank",
+        "tagline": "The Largest Financial Institution in the Middle East",
+        "address": "P.O. Box 1000, Doha, Qatar",
+        "phone": "4440-7777",
+        "email": "info@qnb.com",
+        "website": "http://www.qnb.com",
+        "image": "qnb-logo.png",
+        "membership": 2
+    },
+    {
+        "name": "Ooredoo Qatar",
+        "tagline": "The Best in Connectivity",
+        "address": "P.O. Box 217, Doha, Qatar",
+        "phone": "111",
+        "email": "support@ooredoo.qa",
+        "website": "http://www.ooredoo.qa",
+        "image": "ooredoo-logo.png",
+        "membership": 3
+    },
+    {
+        "name": "Doha Bank",
+        "tagline": "A Dynamic & Innovative Bank",
+        "address": "P.O. Box 3818, Doha, Qatar",
+        "phone": "4422-0000",
+        "email": "info@dohabank.com.qa",
+        "website": "http://www.dohabank.com.qa",
+        "image": "doha-bank-logo.png",
+        "membership": 1
+    },
+    {
+        "name": "Al Jazeera Media Network",
+        "tagline": "The Voice of the Arab World",
+        "address": "P.O. Box 23123, Doha, Qatar",
+        "phone": "4443-9999",
+        "email": "info@aljazeera.net",
+        "website": "http://www.aljazeera.com",
+        "image": "al-jazeera-logo.png",
+        "membership": 2
+    },
+    {
+        "name": "Qatar Petroleum",
+        "tagline": "Delivering Energy for Life",
+        "address": "P.O. Box 3212, Doha, Qatar",
+        "phone": "4499-0000",
+        "email": "info@qp.com.qa",
+        "website": "http://www.qp.com.qa",
+        "image": "qatar-petroleum-logo.png",
+        "membership": 3
+    },
+    {
+        "name": "Aspire Zone Foundation",
+        "tagline": "Home of Sports Excellence",
+        "address": "P.O. Box 333, Doha, Qatar",
+        "phone": "4423-1111",
+        "email": "info@aspirezone.qa",
+        "website": "http://www.aspirezone.qa",
+        "image": "aspire-zone-logo.png",
+        "membership": 1
+    },
+    {
+        "name": "Qatar University",
+        "tagline": "Educating Generations",
+        "address": "P.O. Box 2713, Doha, Qatar",
+        "phone": "4403-3333",
+        "email": "info@qu.edu.qa",
+        "website": "http://www.qu.edu.qa",
+        "image": "qatar-university-logo.png",
+        "membership": 2
+    },
+    {
+        "name": "International Islamic Bank",
+        "tagline": "Sharia-compliant Financial Solutions",
+        "address": "P.O. Box 684, Doha, Qatar",
+        "phone": "4441-0000",
+        "email": "info@iib.com.qa",
+        "website": "http://www.iib.com.qa",
+        "image": "iib-logo.png",
+        "membership": 3
+    },
+    {
+    }
+]
