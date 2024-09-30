@@ -10,6 +10,7 @@ async function fetchMembers() {
     }
 }
 
+
 // Function to load business cards
 async function loadBusinessCards(viewType) {
     const members = await fetchMembers(); // Fetch the data from the JSON file
