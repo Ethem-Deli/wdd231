@@ -7,23 +7,22 @@
     <meta name="author" content="Ethem Deli">
     <meta property="og:title" content="Qatar Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/og-image.jpeg">
+    <meta property="og:image" content="chamber/images/og-image.jpeg">
     <meta property="og:url" content="https://ethem-deli.github.io/wdd231/chamber/directory.html">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Welcome | Qatar Chamber of Commerce</title>
+    <title>Join - Qatar Chamber of Commerce</title>
 </head>
-
-<body>
+<body class="join-page">
     <header>
         <div class="logo">
             <img src="images/logo.png" alt="Qatar Chamber of Commerce Logo">
         </div>
         <nav>
             <ul id="nav-list">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
@@ -35,36 +34,24 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to the Qatar Chamber of Commerce</h1>
-                <p>Your gateway to the thriving business community of Qatar.</p>
-                <a href="directory.html" class="cta-button">Explore Our Directory</a>
-            </div>
-        </section>
+        <section class="join-section">
+            <h1>Join the Qatar Chamber of Commerce</h1>
+            <p>Become a part of Qatar’s leading business network. Gain access to resources, support, and a growing community of entrepreneurs.</p>
+            <form action="#" method="POST" class="join-form">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
 
-        <section class="about">
-            <h2>About Us</h2>
-            <p>The Qatar Chamber of Commerce is dedicated to fostering economic growth and building a strong community. We support local businesses, provide networking opportunities, and offer resources to help your business thrive.</p>
-            <a href="#">Learn More About Membership</a>
-        </section>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
 
-        <section class="featured-members">
-            <h2>Featured Members</h2>
-            <div class="grid">
-                <div class="business-card">
-                    <img src="images/qatarair.png" alt="Business 1">
-                    <h3>Business Name 1</h3>
-                    <p>Your trusted partner.</p>
-                    <a href="directory.html">View Details</a>
-                </div>
-                <div class="business-card">
-                    <img src="images/aljazeera.png" alt="Business 2">
-                    <h3>Business Name 2</h3>
-                    <p>Excellence in service.</p>
-                    <a href="directory.html">View Details</a>
-                </div>
-            </div>
+                <label for="business-name">Business Name:</label>
+                <input type="text" id="business-name" name="business-name" required>
+
+                <label for="industry">Industry:</label>
+                <input type="text" id="industry" name="industry" required>
+
+                <button type="submit" class="btn">Join Now</button>
+            </form>
         </section>
     </main>
 

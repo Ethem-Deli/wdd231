@@ -9,7 +9,7 @@
     <meta property="og:title" content="Qatar Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="chamber/images/og-image.jpeg">
-    <meta property="og:url" content="https://ethem-deli.github.io/wdd231/chamber/directory.html/chamber/images/og-image.jpeg">
+    <meta property="og:url" content="https://ethem-deli.github.io/wdd231/chamber/directory.html">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Qatar Chamber of Commerce Directory</title>
@@ -24,18 +24,33 @@
             <ul id="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </nav>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
 
     <main>
+        <section id="weather-section">
+            <h2>Current Weather in Doha</h2>
+            <p>Temperature: <span id="current-temp">Loading...</span></p>
+            <p>Weather: <span id="weather-desc">Loading...</span></p>
+            <h3>3-Day Forecast</h3>
+            <div id="weather-forecast">Loading...</div>
+        </section>
+
+        <section id="spotlight-section">
+            <h2>Spotlight Members</h2>
+            <div id="spotlights">
+                <!-- Spotlight members will be loaded here -->
+            </div>
+        </section>
+
         <h1>Business Directory</h1>
         <div id="view-buttons" class="view-toggle">
             <button id="grid-view" class="active-view">Grid View</button>
@@ -59,11 +74,9 @@
             <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
             <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
         </div>
-        <p>&copy; <span id="year"></span> Qatar Chamber of Commerce | Last modified: <span id="last-modified"></span>
-        </p>
+        <p><span id="year"></span> Qatar Chamber of Commerce | Last modified: <span id="last-modified"></span></p>
     </footer>
 
-    <script src="scripts/scripts.js"></script>
+<script src="scripts/scripts.js"></script>
 </body>
-
 </html>

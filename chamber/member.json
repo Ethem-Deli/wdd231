@@ -6,7 +6,7 @@
         "phone": "4423-0000",
         "email": "info@qatarairways.com",
         "website": "http://www.qatarairways.com",
-        "image": "qatar-airways-logo.png",
+        "image": "qatarair.png",
         "membership": 1
     },
     {
@@ -88,7 +88,5 @@
         "website": "http://www.iib.com.qa",
         "image": "iib-logo.png",
         "membership": 3
-    },
-    {
     }
 ]

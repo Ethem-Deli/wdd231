@@ -35,6 +35,22 @@ header img {
     height: 50px;
 }
 
+/* Weather Section Styles */
+#weather-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+/* Spotlight Section Styles */
+#spotlight-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
 /* Navigation Menu */
 nav ul {
     list-style-type: none;
@@ -74,31 +90,32 @@ nav ul li a:hover::after {
 
 /* Hamburger Menu Styling */
 .hamburger {
-    display: none;
+    display: none; /* Initially hidden on larger screens */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 20px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .hamburger .bar {
     height: 4px;
     width: 100%;
     background-color: white;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
 /* Show Hamburger Menu on Smaller Screens */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;
+        display: flex; /* Show the hamburger menu on small screens */
     }
 
     nav ul {
         position: fixed;
-        top: 60px;
-        right: -100%;
+        top: 60px; /* Adjust based on header height */
+        right: -100%; /* Off-screen by default */
         width: 200px;
         height: 100vh;
         background-color: #333;
@@ -106,15 +123,15 @@ nav ul li a:hover::after {
         align-items: center;
         justify-content: center;
         gap: 20px;
-        transition: right 0.3s;
+        transition: right 0.3s ease; /* Smooth transition */
     }
 
     nav ul.open {
-        right: 0;
+        right: 0; /* Slide in the menu when opened */
     }
 
     nav ul li a {
-        font-size: 20px;
+        font-size: 20px; /* Larger font for mobile */
     }
 }
 
@@ -129,6 +146,11 @@ nav ul li a:hover::after {
 
 .hamburger.active .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Active class for menu toggle */
+.hamburger.active {
+    transform: rotate(180deg); /* Optional rotation animation */
 }
 
 /* Main Content Styles */
@@ -269,4 +291,92 @@ footer p {
 /* Dynamic Year and Last Modified */
 #year::before {
     content: "© ";
+}
+/* Unique Styles for the Join Page */
+.join-page main {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 3rem 2rem;
+    border: 1px solid #ccc;
+}
+
+.join-page h1 {
+    color: #333;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.join-page form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.join-page form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.join-page form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.join-page form button {
+    background-color: #333;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.join-page form button:hover {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+/* Unique Styles for the Discover Page */
+.discover-page main {
+    background-color: #fff3e6; /* Light orange background */
+    padding: 3rem 2rem;
+}
+
+.discover-page h1 {
+    color: #333;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.discover-page .discover-services {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.discover-page .discover-services .service {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.discover-page .discover-services .service h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #ff6600;
+}
+
+.discover-page .discover-services .service p {
+    color: #666;
+    font-size: 1rem;
 }

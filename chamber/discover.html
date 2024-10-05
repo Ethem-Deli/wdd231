@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,24 @@
     <meta name="author" content="Ethem Deli">
     <meta property="og:title" content="Qatar Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/og-image.jpeg">
+    <meta property="og:image" content="chamber/images/og-image.jpeg">
     <meta property="og:url" content="https://ethem-deli.github.io/wdd231/chamber/directory.html">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Welcome | Qatar Chamber of Commerce</title>
+    <title>Discover - Qatar Chamber of Commerce</title>
 </head>
 
-<body>
+<body class="discover-page">
     <header>
         <div class="logo">
             <img src="images/logo.png" alt="Qatar Chamber of Commerce Logo">
         </div>
         <nav>
             <ul id="nav-list">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
             </ul>
         </nav>
         <div class="hamburger" id="hamburger">
@@ -34,35 +35,27 @@
         </div>
     </header>
 
+
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to the Qatar Chamber of Commerce</h1>
-                <p>Your gateway to the thriving business community of Qatar.</p>
-                <a href="directory.html" class="cta-button">Explore Our Directory</a>
-            </div>
-        </section>
+        <section class="discover-section">
+            <h1>Discover the Qatar Chamber of Commerce</h1>
+            <p>Explore the services, events, and opportunities available through the Chamber. Whether you're a business
+                owner or a prospective entrepreneur, the Chamber of Commerce is here to help you succeed.</p>
 
-        <section class="about">
-            <h2>About Us</h2>
-            <p>The Qatar Chamber of Commerce is dedicated to fostering economic growth and building a strong community. We support local businesses, provide networking opportunities, and offer resources to help your business thrive.</p>
-            <a href="#">Learn More About Membership</a>
-        </section>
-
-        <section class="featured-members">
-            <h2>Featured Members</h2>
-            <div class="grid">
-                <div class="business-card">
-                    <img src="images/qatarair.png" alt="Business 1">
-                    <h3>Business Name 1</h3>
-                    <p>Your trusted partner.</p>
-                    <a href="directory.html">View Details</a>
+            <div class="discover-services">
+                <div class="service">
+                    <h2>Business Resources</h2>
+                    <p>Access valuable business resources including guides, templates, and support to help grow your
+                        business.</p>
                 </div>
-                <div class="business-card">
-                    <img src="images/aljazeera.png" alt="Business 2">
-                    <h3>Business Name 2</h3>
-                    <p>Excellence in service.</p>
-                    <a href="directory.html">View Details</a>
+                <div class="service">
+                    <h2>Networking Events</h2>
+                    <p>Attend our networking events and connect with like-minded professionals in your industry.</p>
+                </div>
+                <div class="service">
+                    <h2>Advocacy</h2>
+                    <p>We advocate for businesses on important issues to help shape policies that benefit the business
+                        community.</p>
                 </div>
             </div>
         </section>
@@ -83,6 +76,7 @@
         <p><span id="year"></span> Qatar Chamber of Commerce | Last modified: <span id="last-modified"></span></p>
     </footer>
 
-<script src="scripts/scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
+
 </html>
