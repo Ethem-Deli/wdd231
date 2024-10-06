@@ -168,14 +168,20 @@ document.getElementById('list-view').addEventListener('click', () => {
 loadBusinessCards('grid');
 
 // Hamburger menu functionality Toggle
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.querySelector('nav ul');
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('nav ul');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active'); // Toggle animation for the hamburger icon
-    navMenu.classList.toggle('open'); // Slide in the menu
+    hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('active'); // Toggle animation for the hamburger icon
+        navMenu.classList.toggle('open'); // Slide in the menu
+    });
+
+    // Set current year and last modified date
+    // Update the year and last modified date in the footer
+    const year = new Date().getFullYear();
+    document.getElementById('year').textContent = year;
+
+    const lastModified = new Date(document.lastModified);
+    document.getElementById('last-modified').textContent = lastModified.toLocaleString();
 });
-
-// Set current year and last modified date
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('last-modified').textContent = document.lastModified;
