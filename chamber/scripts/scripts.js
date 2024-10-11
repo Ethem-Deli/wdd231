@@ -1,4 +1,5 @@
 // Sample business data for Qatar
+
 const businesses = [
     {
         name: "Qatar Airways",
@@ -150,23 +151,6 @@ function loadBusinessCards(viewType) {
         directory.appendChild(card);
     });
 }
-
-// Toggle between Grid and List views
-document.getElementById('grid-view').addEventListener('click', () => {
-    document.body.classList.remove('list-view');
-    document.body.classList.add('grid-view');
-    loadBusinessCards('grid');
-});
-
-document.getElementById('list-view').addEventListener('click', () => {
-    document.body.classList.remove('grid-view');
-    document.body.classList.add('list-view');
-    loadBusinessCards('list');
-});
-
-// Load grid view by default
-loadBusinessCards('grid');
-
 // Hamburger menu functionality Toggle
 document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.getElementById('hamburger');

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a quiz about HTML and CSS. Test your knowledge!">
+    <meta name="author" content="Your Name">
+    <title>HTML and CSS Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+<body>
+    <header>
+        <h1>HTML and CSS Quiz</h1>
+    </header>
+    <form action="#" method="post">
+        <div class="question">
+            <label for="q1"><b>1.</b> Fill in the blank: What does the acronym CSS stand for? <input type="text" name="q1" id="q1" required>. </label>
+        </div>
+        <div class="question">
+            <label for="q2"><b>2.</b> What does CSS stand for?</label>
+            <textarea name="q2" id="q2" rows="4" required></textarea>
+        </div>
+        <div class="question">
+            <label for="q3"><b>3.</b> Which of the following is NOT a valid HTML tag?</label>
+            <select name="q3" id="q3" required>
+                <option value="" selected disabled>Choose One ...</option>
+                <option value="div">&lt;div&gt;</option>
+                <option value="p">&lt;p&gt;</option>
+                <option value="span">&lt;span&gt;</option>
+            </select>
+        </div>
+        <div class="question">
+            <label for="q4"><b>4.</b> How many levels of headings are available in HTML?</label>
+            <input type="number" name="q4" id="q4" required>
+        </div>
+        <div class="question">
+            <label for="q5"><b>5.</b> True or False: HTML is a programming language.</label>
+            <select name="q5" id="q5" required>
+                <option value="" selected disabled>Choose One ...</option>
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+        </div>
+        <div class="question">
+            <label for="q6"><b>6.</b> Match the HTML tag with its purpose:</label>
+            <select name="q6" id="q6" required>
+                <option value="" selected disabled>Choose One ...</option>
+                <option value="a">a. &lt;p&gt;</option>
+                <option value="b">b. &lt;img&gt;</option>
+                <option value="c">c. &lt;h1&gt;</option>
+            </select>
+            <select name="q6-match" id="q6-match" required>
+                <option value="" selected disabled>Choose One ...</option>
+                <option value="paragraph">Paragraph</option>
+                <option value="image">Image</option>
+                <option value="heading">Heading</option>
+            </select>
+        </div>
+        <div class="question">
+            <label for="q7"><b>7.</b> Upload a file:</label>
+            <input type="file" name="q7" id="q7" accept=".pdf,.doc,.docx" required>
+        </div>     
+        <button type="submit"><b>Submit Quiz</b></button>
+        <div class="warning-message">Please answer all questions before submitting the quiz.</div>
+    </form>
+</body>
+</html>
