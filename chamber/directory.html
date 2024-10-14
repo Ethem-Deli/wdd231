@@ -35,22 +35,45 @@
         </div>
     </header>
 
+
     <main>
         <section id="weather-section">
             <h2>Current Weather in Doha</h2>
             <p>Temperature: <span id="current-temp">Loading...</span></p>
             <p>Weather: <span id="weather-desc">Loading...</span></p>
+            <img id="weather-icon" alt="Weather Icon" />
             <h3>3-Day Forecast</h3>
             <div id="weather-forecast">Loading...</div>
         </section>
 
         <section id="spotlight-section">
-            <h2>Spotlight Members</h2>
+            <h2 id="spotlight-title">Spotlight Members</h2>
             <div id="spotlights">
-                <!-- Spotlight members will be loaded here -->
+                <div class="spotlight-card">
+                    <img src="images/aljazeera.png" alt="Member 1">
+                    <h2>Member 1</h2>
+                    <p>Company 1</p>
+                </div>
+                <div class="spotlight-card">
+                    <img src="images/doha-bank.png" alt="Member 2">
+                    <h2>Member 2</h2>
+                    <p>Company 2</p>
+                </div>
+                <div class="spotlight-card">
+                    <img src="images/ooredoo.png" alt="Member 3">
+                    <h2>Member 3</h2>
+                    <p>Company 3</p>
+                </div>
             </div>
         </section>
-
+        </section>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to the Qatar Chamber of Commerce</h1>
+                <p>Your gateway to the thriving business community of Qatar.</p>
+                <a href="join.html" class="cta-button">Join our community now</a>
+            </div>
+        </section>
 
         <h1>Business Directory</h1>
         <div id="view-buttons" class="view-toggle">
@@ -65,7 +88,7 @@
 
     <footer>
         <div>
-            <p>Qatar Chamber of Commerce</p>
+            <p>Qatar Chamber of Commerce</p>  
             <p>Doha, Qatar The Pearl, 974</p>
             <p>Email: info@Qatarchamber.org | Phone: (974) 5060-6655</p>
         </div>

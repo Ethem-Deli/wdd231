@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit your product reviews with our easy-to-use form. Rate the product, describe its features, and provide your feedback.">
+    <meta name="author" content="Ethem Deli">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <h1>Product Review</h1>
+    <form action="review.html" method="get">
+        <div>
+            <label for="product-name">Product Name</label>
+            <select id="product-name" name="product-name" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+        </div>
+        <div>
+            <label for="star5">Overall Rating</label>
+            <div id="rating">
+                <input type="radio" id="star1" name="rating" value="1" required>
+                <label for="star1">★</label>
+                <input type="radio" id="star2" name="rating" value="2" required>
+                <label for="star2">★</label>
+                <input type="radio" id="star3" name="rating" value="3" required>
+                <label for="star3">★</label>
+                <input type="radio" id="star4" name="rating" value="4" required>
+                <label for="star4">★</label>
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5">★</label>
+            </div>
+        </div>
+        <div>
+            <label for="installation-date">Date of Installation</label>
+            <input type="date" id="installation-date" name="installation-date" required>
+        </div>
+        <div>
+            <label>Which features did you find useful in the product? (Check all that apply)</label>
+            <div>
+                <input type="checkbox" id="durability" name="useful-features" value="Durability">
+                <label for="durability">Durability</label>
+            </div>
+            <div>
+                <input type="checkbox" id="ease-of-use" name="useful-features" value="Ease of Use">
+                <label for="ease-of-use">Ease of Use</label>
+            </div>
+            <div>
+                <input type="checkbox" id="performance" name="useful-features" value="Performance">
+                <label for="performance">Performance</label>
+            </div>
+            <div>
+                <input type="checkbox" id="design" name="useful-features" value="Design">
+                <label for="design">Design</label>
+            </div>
+            <div>
+                <input type="checkbox" id="quality" name="useful-features" value="Quality">
+                <label for="quality">Quality</label>
+            </div>
+        </div>
+        <div>
+            <label for="written-review">Written Review (Optional)</label>
+            <textarea id="written-review" name="written-review"></textarea>
+        </div>
+        <div>
+            <label for="user-name">Your Name (Optional)</label>
+            <input type="text" id="user-name" name="user-name">
+        </div>
+        <div>
+            <input type="submit" value="Post Review">
+        </div>
+    </form>
+    <footer>
+        <p><strong>©<span id="year"></span> 🎗️ Ethem Deli 🎗️ 🥇Turkey / Philippines🥇</strong></p>
+        <p><strong>Modification: <span id="lastModified"></span></strong></p>
+    </footer>
+</body>
+</html>

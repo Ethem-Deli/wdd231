@@ -7,8 +7,6 @@ body {
     background-color: #f5f5f5;
 }
 
-
-
 /* Header Styles */
 header {
     background-color: #333;
@@ -36,9 +34,17 @@ header::before {
 header img {
     height: 50px;
 }
-
+.member {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #ff5733;
+    color: white;
+}
 /* Weather Section Styles */
 #weather-section {
+    background-image: url('../images/weather.jpg');
     margin-bottom: 2rem;
     padding: 1rem;
     background-color: #fff;
@@ -47,10 +53,60 @@ header img {
 
 /* Spotlight Section Styles */
 #spotlight-section {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: #fff;
+    padding: 20px;
+    background-color: #fff;  /* Box color */
+    border: 2px solid #ddd;  /* Border around the entire spotlight section */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Flexbox for horizontal display of spotlight cards */
+#spotlights {
+    display: flex;
+    justify-content: space-around; /* Evenly space the cards */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the cards */
+}
+
+.spotlight-card {
+    flex: 1; /* Make all cards flexible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
     border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    text-align: center; /* Center text */
+}
+
+.spotlight-card img {
+    max-width: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Make the image round */
+}
+
+.spotlight-card h2 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.spotlight-card p {
+    margin: 3px 0;
+}
+
+/* Title Styling */
+#spotlight-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    margin-bottom: 20px;
 }
 
 /* Navigation Menu */
@@ -135,6 +191,29 @@ nav ul li a:hover::after {
     nav ul li a {
         font-size: 20px; /* Larger font for mobile */
     }
+}
+
+.hero {
+    background-image: url('../images/chamber.jpg');
+    height: 20vh; /* Full viewport height */
+    background-size: cover; /* Cover the whole area */
+    background-position: left; /* Center the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    color: black; /* Text color */
+    text-align: center; /* Center text */
+}
+
+.cta-button {
+    background-color: #ff5733; /* Button color */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
 }
 
 /* Hamburger Animation */
@@ -293,56 +372,6 @@ footer p {
 /* Dynamic Year and Last Modified */
 #year::before {
     content: "© ";
-}
-/* Unique Styles for the Join Page */
-.join-page main {
-    background-color: #f0f8ff; /* Light blue background */
-    padding: 3rem 2rem;
-    border: 1px solid #ccc;
-}
-
-.join-page h1 {
-    color: #333;
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-.join-page form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.join-page form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.join-page form input {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.join-page form button {
-    background-color: #333;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.join-page form button:hover {
-    background-color: #ffcc00;
-    color: #333;
 }
 
 /* Unique Styles for the Discover Page */

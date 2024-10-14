@@ -1,0 +1,294 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+header {
+    background-color: #2024ff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 50px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+header h1 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.nav-box {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.auth-buttons .button,
+.search-form button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.auth-buttons .button:hover,
+.search-form button:hover {
+    background-color: #777;
+}
+
+.search-form input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.hero {
+    background-color: white;
+    color: black;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 0;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.featured-routes,
+.featured-routes-map,
+.safety-tips,
+.community-events,
+.latest-models,
+.testimonials,
+.newsletter,
+.faq,
+.attributions {
+    margin-top: 20px;
+}
+
+.featured-routes h3,
+.featured-routes-map h4,
+.safety-tips h2,
+.community-events h2,
+.latest-models h4,
+.testimonials h2,
+.newsletter h5,
+.faq h2,
+.attributions h2 {
+    margin-bottom: 10px;
+}
+
+.routes-container,
+.models-container,
+.routes-map-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.route,
+.model {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 40px);
+    margin: 10px;
+}
+
+.route img,
+.model img {
+    width: 100%;
+    height: auto;
+}
+
+.route p,
+.model p {
+    padding: 10px;
+}
+
+.safety-tips ul,
+.community-events ul,
+.attributions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.safety-tips-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.safety-tips-column,
+.attributions ul {
+    width: 48%;
+}
+
+.safety-tips ul li,
+.community-events ul li,
+.attributions ul li {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .testimonial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.newsletter label {
+    margin-bottom: 5px;
+}
+
+.newsletter input,
+.newsletter button {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.newsletter button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-item h3 {
+    cursor: pointer;
+    margin: 0;
+}
+
+.faq-content {
+    display: none;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: blue;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: rgb(255, 254, 197);
+    color: blue;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+}
+
+
+.live-chat-button {
+    background-color: #0011ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: fixed; /* Change from absolute to fixed */
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure the button stays above other content */
+    border-radius: 5px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for better visibility */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+.live-chat-button:hover {
+    background-color: #0033cc; /* Darker shade for hover effect */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .top-right {
+        flex-direction: column;
+        position: static;
+    }
+
+    .nav-box nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .routes-container,
+    .models-container,
+    .routes-map-container {
+        flex-direction: column;
+    }
+
+    .route,
+    .model {
+        flex: 1 1 100%;
+    }
+
+    .safety-tips-container {
+        flex-direction: column;
+    }
+
+    .safety-tips-column,
+    .attributions ul {
+        width: 100%;
+    }
+}

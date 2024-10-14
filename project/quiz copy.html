@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take our quiz to find the best electric scooter for you. Answer a few questions and get personalized recommendations.">
+    <meta name="author" content="Ethem Deli">
+    <title>Electric Scooter Quiz</title>
+    <link rel="stylesheet" href="style/quiz.css">
+</head>
+<body>
+    <header>
+        <h1>Electric Scooter Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="siteplan.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="form.html">Review</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <form id="quiz-form">
+            <div class="question">
+                <h2>1. What is your primary reason for buying an electric scooter?</h2>
+                <input type="radio" id="commute" name="reason" value="Commute" required>
+                <label for="commute">Commute</label><br>
+                <input type="radio" id="recreation" name="reason" value="Recreation">
+                <label for="recreation">Recreation</label><br>
+                <input type="radio" id="short-trips" name="reason" value="Short Trips">
+                <label for="short-trips">Short Trips</label><br>
+                <input type="radio" id="other" name="reason" value="Other">
+                <label for="other">Other</label>
+            </div>
+            <div class="question">
+                <h2>2. What is your budget for an electric scooter?</h2>
+                <input type="radio" id="budget1" name="budget" value="Below $500" required>
+                <label for="budget1">Below $500</label><br>
+                <input type="radio" id="budget2" name="budget" value="$500 - $1000">
+                <label for="budget2">$500 - $1000</label><br>
+                <input type="radio" id="budget3" name="budget" value="$1000 - $1500">
+                <label for="budget3">$1000 - $1500</label><br>
+                <input type="radio" id="budget4" name="budget" value="Above $1500">
+                <label for="budget4">Above $1500</label>
+            </div>
+            <div class="question">
+                <h2>3. How far do you plan to travel on your electric scooter?</h2>
+                <input type="radio" id="distance1" name="distance" value="Less than 5 km" required>
+                <label for="distance1">Less than 5 km</label><br>
+                <input type="radio" id="distance2" name="distance" value="5 - 10 km">
+                <label for="distance2">5 - 10 km</label><br>
+                <input type="radio" id="distance3" name="distance" value="10 - 20 km">
+                <label for="distance3">10 - 20 km</label><br>
+                <input type="radio" id="distance4" name="distance" value="More than 20 km">
+                <label for="distance4">More than 20 km</label>
+            </div>
+            <div class="question">
+                <h2>4. What type of terrain will you be riding on?</h2>
+                <input type="radio" id="terrain1" name="terrain" value="Flat" required>
+                <label for="terrain1">Flat</label><br>
+                <input type="radio" id="terrain2" name="terrain" value="Hilly">
+                <label for="terrain2">Hilly</label><br>
+                <input type="radio" id="terrain3" name="terrain" value="Mixed">
+                <label for="terrain3">Mixed</label><br>
+                <input type="radio" id="terrain4" name="terrain" value="Off-road">
+                <label for="terrain4">Off-road</label>
+            </div>
+            <div class="question">
+                <h2>5. How important is portability to you?</h2>
+                <input type="radio" id="portability1" name="portability" value="Very Important" required>
+                <label for="portability1">Very Important</label><br>
+                <input type="radio" id="portability2" name="portability" value="Somewhat Important">
+                <label for="portability2">Somewhat Important</label><br>
+                <input type="radio" id="portability3" name="portability" value="Not Important">
+                <label for="portability3">Not Important</label>
+            </div>
+            <div class="submit-container">
+                <input type="submit" value="Get Recommendations">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>©<span id="year"></span> 🎗️ Ethem Deli 🎗️ 🥇Turkey / Philippines🥇</p>
+        <p>Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

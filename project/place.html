@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Turkey: Culture, Geography, and Weather</title>
+    <meta name="description" content="Learn about Turkey, its capital Ankara, and the dynamic web development skills of Ethem Deli. This page provides information on Turkey's geography, population, and weather conditions.">
+    <meta name="author" content="Ethem Deli">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script defer src="scripts/place.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Explore Turkey</h1>
+    </header>
+
+    <main>
+        <div class="image-container">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/kapadokya.webp">
+                <source media="(min-width: 601px)" srcset="images/ankara.webp">
+                <img src="images/ankara.webp" alt="Museum in Turkey">
+            </picture>
+            <div class="overlay">
+                <div class="data">
+                    <h2>Data</h2>
+                    <p><strong>Area:</strong> 783,562 sq km</p>
+                    <p><strong>Population:</strong> 84,980,000</p>
+                    <p><strong>Capital:</strong> Ankara</p>
+                    <p><strong>Languages:</strong> Turkish</p>
+                    <p><strong>Currency:</strong> Turkish Lira</p>
+                    <p><strong>Time Zone:</strong> GMT+3</p>
+                    <p><strong>Calling Code:</strong> +90</p>
+                    <p><strong>Internet TLD:</strong> .tr</p>
+                </div>
+
+                <div class="weather">
+                    <h3>Weather</h3>
+                    <span class="icon">
+                        <img class="weather-large-icon" src="images/weather-icon-large.svg" alt="Weather Icon Large">
+                        <img class="weather-icon" src="images/weather-icon.svg" alt="Weather Icon">
+                    </span>
+                    <p><strong>Temperature:</strong> 15°C</p>
+                    <p><strong>Conditions:</strong> Rainy</p>
+                    <p><strong>Wind:</strong> 5 km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>©<span id="year"></span> 🎗️ Ethem Deli 🎗️ Turkey 🥇</strong></p>
+        <p><strong>Modification: <span id="lastModified"></span></strong></p>
+    </footer>
+</body>
+</html>

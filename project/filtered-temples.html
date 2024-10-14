@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ethem Deli's Temple Album showcasing well-designed and historically significant temples he wishes to visit one day.">
+    <meta name="author" content="Ethem Deli">
+    <title>Filtered Temples</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+
+<body>
+    <header>
+        <h1>Filtered Temples</h1>
+        <nav>
+            <ul>
+                <!-- Navigation buttons for filtering the temple list -->
+                <li><a href="#" onclick="filterTemples('all')">Home</a></li>
+                <li><a href="#" onclick="filterTemples('old')">Old</a></li>
+                <li><a href="#" onclick="filterTemples('new')">New</a></li>
+                <li><a href="#" onclick="filterTemples('large')">Large</a></li>
+                <li><a href="#" onclick="filterTemples('small')">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Added heading for the main content -->
+        <h2>Temples</h2>
+        <!-- Container for dynamically generated temple cards -->
+        <div class="container" id="templeContainer"></div>
+    </main>
+    <footer>
+        <!-- Footer content with dynamic year and last modified date -->
+        <p>&copy; <span id="year"></span> 🎗️Ethem Deli🎗️ &nbsp;🥇Turkey / Philippines🥇 </p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+    <!-- JavaScript file for dynamic content and filtering -->
+    <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>

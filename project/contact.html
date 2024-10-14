@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact page for Ethem Deli's website">
+    <meta name="author" content="Ethem Deli">
+    <title>Contact - My Website</title>
+    <link rel="stylesheet" href="style/contact.css">
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="siteplan.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="form.html">Review</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form action="contact.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> 🎗️Ethem Deli🎗️ &nbsp;🥇Turkey / Philippines🥇</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+    <button class="live-chat-button" onclick="window.open('https://wa.me/+97450606655', '_blank')">
+        Chat with us on WhatsApp
+    </button>
+    <script src="script/siteplan.js"></script>
+</body>
+</html>
+

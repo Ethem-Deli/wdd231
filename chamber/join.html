@@ -11,6 +11,7 @@
     <meta property="og:image" content="images/og-image.jpeg">
     <meta property="og:url" content="https://ethem-deli.github.io/wdd231/chamber/directory.html">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/join.css">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Join - Qatar Chamber of Commerce</title>
 </head>
@@ -36,25 +37,111 @@
     </header>
 
     <main>
-        <section class="join-section">
-            <h1>Join the Qatar Chamber of Commerce</h1>
-            <p>Become a part of Qatar’s leading business network. Gain access to resources, support, and a growing
-                community of entrepreneurs.</p>
-            <form action="#" method="POST" class="join-form">
-                <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="full-name" required>
+        <section class="join-container">
+            <!-- Grid layout for form and membership -->
+            <div class="membership-grid">
+                <!-- Membership Application Form -->
+                <div class="form-section">
+                    <h2>Membership Application Form</h2>
+                    <form action="thankyou.html" method="GET" class="join-form">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required title="Enter your first name" autocomplete="given-name">
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" required title="Enter your last name" autocomplete="family-name">
 
-                <label for="business-name">Business Name:</label>
-                <input type="text" id="business-name" name="business-name" required>
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" title="Your title in the organization" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
 
-                <label for="industry">Industry:</label>
-                <input type="text" id="industry" name="industry" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required title="Enter your email address" autocomplete="email" placeholder="example@domain.com">
 
-                <button type="submit" class="btn">Join Now</button>
-            </form>
+                        <label for="phone">Cell Phone:</label>
+                        <input type="tel" id="phone" name="phone" required title="Enter your mobile phone number" autocomplete="tel">
+
+                        <label for="organization">Organization:</label>
+                        <input type="text" id="organization" name="organization" required title="Enter your organization's name" autocomplete="organization">
+
+                        <label for="membership-level">Membership Level:</label>
+                        <select id="membership-level" name="membership-level">
+                            <option value="np">Non Profit Membership</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+
+                        <label for="description">Organization Description:</label>
+                        <textarea id="description" name="description" title="Describe your organization"></textarea>
+
+                        <!-- Hidden timestamp field -->
+                        <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                        <button type="submit" class="submit-btn">Join Now</button>
+                    </form>
+                </div>
+
+                <!-- Membership Levels Section -->
+                <div class="membership-levels">
+                    <h2>Membership Levels</h2>
+
+                    <!-- Membership Cards with Modals -->
+                    <div class="membership-card">
+                        <div class="card-content">
+                            <h3>Non Profit Membership Level</h3>
+                            <button onclick="openModal('modal-np')">Learn More</button>
+                        </div>
+                        <div id="modal-np" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal-np')">&times;</span>
+                                <h3>Non Profit Membership Benefits</h3>
+                                <p>No fees, access to all community events, training, and support.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="membership-card">
+                        <div class="card-content">
+                            <h3>Bronze Membership Level</h3>
+                            <button onclick="openModal('modal-bronze')">Learn More</button>
+                        </div>
+                        <div id="modal-bronze" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
+                                <h3>Bronze Membership Benefits</h3>
+                                <p>Entry-level benefits include advertising and event discounts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="membership-card">
+                        <div class="card-content">
+                            <h3>Silver Membership Level</h3>
+                            <button onclick="openModal('modal-silver')">Learn More</button>
+                        </div>
+                        <div id="modal-silver" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal-silver')">&times;</span>
+                                <h3>Silver Membership Benefits</h3>
+                                <p>Mid-level benefits include advertising, premium events, and training.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="membership-card">
+                        <div class="card-content">
+                            <h3>Gold Membership Level</h3>
+                            <button onclick="openModal('modal-gold')">Learn More</button>
+                        </div>
+                        <div id="modal-gold" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal-gold')">&times;</span>
+                                <h3>Gold Membership Benefits</h3>
+                                <p>Top-tier benefits with full advertising support and event sponsorship.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -63,7 +150,6 @@
             <p>Qatar Chamber of Commerce</p>
             <p>Doha, Qatar The Pearl, 974</p>
             <p>Email: info@Qatarchamber.org | Phone: (974) 5060-6655</p>
-        </div>
         <div class="social-icons">
             <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
             <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
@@ -72,6 +158,7 @@
         </div>
         <p><span id="year"></span> Qatar Chamber of Commerce | Last modified: <span id="last-modified"></span></p>
     </footer>
+
     <script src="scripts/scripts.js"></script>
 </body>
 

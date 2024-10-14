@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for Neighborhood E-Scooters">
+    <meta name="author" content="Ethem Deli">
+    <title>Register - Neighborhood E-Scooters</title>
+    <link rel="stylesheet" href="style/auth.css">
+</head>
+<body>
+    <header>
+        <h1>Neighborhood E-Scooters</h1>
+        <nav>
+            <ul>
+                <li><a href="siteplan.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="form.html">Review</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="auth-container">
+        <div class="form-container">
+            <h2>Signup</h2>
+            <form id="registerForm" action="register_success.html" method="post">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                <button type="submit">Signup</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <button class="live-chat-button" onclick="window.open('https://wa.me/+97450606655', '_blank')">
+        Chat with us on WhatsApp
+    </button>
+
+    <footer>
+        <p>&copy; <span id="year"></span> 🎗️Ethem Deli🎗️ &nbsp;🥇Turkey / Philippines🥇</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="script/siteplan.js"></script>
+</body>
+</html>
