@@ -197,13 +197,13 @@ nav ul li a:hover::after {
     background-image: url('../images/chamber.jpg');
     height: 20vh; /* Full viewport height */
     background-size: cover; /* Cover the whole area */
-    background-position: left; /* Center the image */
+    background-position: left; /* Keep the background image positioned to the left */
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
+    justify-content: flex-start; /* Align items to the top (start of the flex container) */
+    align-items: flex-start; /* Align items to the left */
     color: black; /* Text color */
-    text-align: center; /* Center text */
+    text-align: left; /* Align text to the left */
 }
 
 .cta-button {
