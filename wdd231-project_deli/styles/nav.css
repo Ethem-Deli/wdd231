@@ -1,0 +1,70 @@
+/* Desktop Navigation */
+.navbar {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar ul li .nav-icon {
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.navbar ul li.active .nav-icon {
+    color: #e76f51;
+}
+
+.navbar ul li .text {
+    margin-top: 5px;
+    transition: color 0.3s;
+}
+
+.navbar ul li.active .text {
+    color: #e76f51;
+}
+
+.navbar ul .indicator {
+    position: absolute;
+    bottom: -5px;
+    width: 60px;
+    height: 5px;
+    background: #e76f51;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+.navbar ul li:hover .nav-icon,
+.navbar ul li:hover .text {
+    color: #e9c46a;
+}
+
+@media (max-width: 768px) {
+    /* Hide the desktop navbar */
+    nav.navbar {
+        display: none;
+    }
+}

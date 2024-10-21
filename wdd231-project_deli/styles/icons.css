@@ -1,0 +1,51 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.icon {
+    width: 3.625rem;
+    height: 5.625rem;
+    background-color: #fff;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.icon:hover > i {
+    scale: 1.6;
+    color: rgb(255, 255, 255); /* Change to red on hover */
+}
+
+.icon:before {
+    background: var(--color);
+    content: " ";
+    position: absolute;
+    width: 160%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(50deg);
+    transition: background 0.5s ease; /* Smooth transition for hover color */
+}
+
+.icon:hover:before {
+    background: red; /* Background transition to red */
+    animation: slide 0.9s forwards;
+}
+
+@keyframes slide {
+    50% {
+        left: 10%;
+        top: -40%;
+    }
+    100% {
+        left: -15%;
+        top: -15%;
+    }
+}
