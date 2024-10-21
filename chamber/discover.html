@@ -10,8 +10,8 @@
     <meta property="og:image" content="images/og-image.jpeg">
     <meta property="og:url" content="https://ethem-deli.github.io/wdd231/chamber/directory.html">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/styles.css">
     <title>Discover - Qatar Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/discover.css">
 </head>
 
 
@@ -37,59 +37,77 @@
 
 
     <main>
-            <section class="discover-grid">
-                <!-- Sidebar Section -->
-                <aside class="sidebar">
-                    <h2>About the Chamber</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec.</p>
-                    
-                    <!-- Event Calendar or Other Sidebar Items -->
-                    <div class="calendar">
-                        <h3>Upcoming Events</h3>
-                        <p>June 24, 2024</p>
-                        <!-- A calendar or event-related items go here -->
+        <!-- Grid Layout to fit the sidebar and main content -->
+        <div class="grid-layout">
+            <!-- Sidebar Section -->
+            <aside class="sidebar">
+                <div class="about">
+                    <h2>Discover the Qatar Chamber of Commerce: Your Gateway to Business Opportunities and Growth in Qatar</h2>
+                    <p>The Qatar Chamber of Commerce is at the heart of the nation’s business community, offering a wealth
+                        of resources and opportunities for local and international companies alike. From networking events
+                        and business directories to trade support and advocacy, the Chamber provides a platform for entrepreneurs,
+                        corporations, and investors to thrive in one of the fastest-growing economies in the world. Whether you're
+                        a small business looking for growth or a global enterprise exploring new markets, the Qatar Chamber of Commerce
+                        is your trusted partner in fostering innovation, collaboration, and success. Explore the services, events, and
+                        resources designed to help your business flourish in Qatar’s dynamic and diverse marketplace..</p>
+                </div>
+                
+                <div class="image-text">
+                    <h2>Explore the Comprehensive Services and Opportunities Provided by the Qatar Chamber of Commerce</h2>
+                    <div class="image-placeholder">
+                        <!--<img src="images/chamber.jpg.webp" alt="Placeholder">-->
                     </div>
-                    
-                    <!-- Visitor message will go here -->
-                    <div id="visit-message"></div>
-                </aside>
-        
-                <!-- Main Content for Discover -->
-                <section class="main-content">
-                    <h1>Discover the Chamber</h1>
-                    <p>Explore the services and opportunities available through the Chamber.</p>
-        
-                    <!-- Lazy Loading Image Gallery -->
-                    <div class="image-gallery">
-                        <figure>
-                            <img src="images/photo1.jpg" alt="Description 1" loading="lazy">
-                            <figcaption>Image Caption 1</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/photo2.jpg" alt="Description 2" loading="lazy">
-                            <figcaption>Image Caption 2</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/photo3.jpg" alt="Description 3" loading="lazy">
-                            <figcaption>Image Caption 3</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/photo4.jpg" alt="Description 4" loading="lazy">
-                            <figcaption>Image Caption 4</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/photo5.jpg" alt="Description 5" loading="lazy">
-                            <figcaption>Image Caption 5</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/photo6.jpg" alt="Description 6" loading="lazy">
-                            <figcaption>Image Caption 6</figcaption>
-                        </figure>
-                    </div>
-                </section>
+                    <p>The Qatar Chamber of Commerce offers a wide range of services tailored to support the growth and
+                        success of businesses across all sectors. From facilitating local and international trade
+                        partnershipsto offering expert advice on regulatory compliance, the Chamber is committed to
+                        empowering businesses to navigate the competitive landscape with confidence. Through networking events,
+                        industry insights, and access to valuable resources, the Chamber creates opportunities for businesses to
+                        connect, collaborate, and expand their reach. Whether you're seeking business consultancy, training programs,
+                        or guidance on market trends, the Qatar Chamber of Commerce provides a robust platform to ensure your business thrives in Qatar’s dynamic economy.</p>
+                </div>
+                
+                <!-- Event Calendar -->
+                <div class="calendar">
+                    <h3>June 24, 2024</h3>
+                    <table>
+                        <tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+                        <tr><td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td></tr>
+                        <!-- Add other days here -->
+                    </table>
+                </div>
+            </aside>
+
+            <!-- Main Content for Discover -->
+            <section class="main-content">
+            
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img data-src="images/image-1.jpg" alt="Image 1 caption" class="lazyload">
+                    <p>Discverr the sand dunes</p>
+                </div>
+                <div class="gallery-item">
+                    <img data-src="images/image-2.jpg" alt="Image 2 caption" class="lazyload">
+                    <p>Discover the nature of Qatar</p>
+                </div>
+                <div class="gallery-item">
+                    <img data-src="images/image-3.jpg" alt="Image 3 caption" class="lazyload">
+                    <p>Discover westbay's tall tower</p>
+                </div>
+                <div class="gallery-item">
+                    <img data-src="images/image-4.jpg" alt="Image 4 caption" class="lazyload">
+                    <p>Discover the historical mosques</p>
+                </div>
+                <div class="gallery-item">
+                    <img data-src="images/image-5.jpg" alt="Image 5 caption" class="lazyload">
+                    <p>Discover the biggest mall Place Vendome of Qatar</p>
+                </div>
+                <div class="gallery-item">
+                    <img data-src="images/image-6.jpg" alt="Image 6 caption" class="lazyload">
+                    <p>Discover the National Museum of Qatar.</p>
+                </div>
+
             </section>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer>
@@ -106,6 +124,7 @@
         </div>
         <p><span id="year"></span> Qatar Chamber of Commerce | Last modified: <span id="last-modified"></span></p>
     </footer>
+    <script src="scripts/discover.js"></script>
     <script src="scripts/scripts.js"></script>
 </body>
 </html>
