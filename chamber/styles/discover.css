@@ -15,7 +15,7 @@ header {
     padding: 20px;
     background-color: #f1f1f1;
 }
-* Hamburger Menu Styling */
+/* Hamburger Menu Styling */
 .hamburger {
     display: none; /* Initially hidden on larger screens */
     flex-direction: column;
