@@ -258,3 +258,19 @@ footer {
         display: block;
     }
 }
+
+.fa-beat {
+    animation-delay: 0s !important; /* Use a fixed value */
+}
+
+.fa-flip {
+    animation-delay: 0s !important; /* Use a fixed value */
+}
+
+.fa-spin {
+    animation-delay: 0s !important; /* Use a fixed value */
+}
+
+.fa-rotate-by {
+    transform: rotate(0deg) !important; /* Set a default transform */
+}
