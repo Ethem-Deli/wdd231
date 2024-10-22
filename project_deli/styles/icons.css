@@ -18,7 +18,7 @@
 }
 
 .icon:hover > i {
-    scale: 1.6;
+    transform: scale(1.6);
     color: rgb(255, 255, 255); /* Change to red on hover */
 }
 
