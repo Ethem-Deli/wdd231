@@ -274,3 +274,19 @@ footer {
 .fa-rotate-by {
     transform: rotate(0deg) !important; /* Set a default transform */
 }
+/* Wireframe Section */
+.wireframe-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.wireframe-box {
+    background-color: rgba(200, 200, 200, 0.5);
+    border: 2px solid #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+}
