@@ -51,50 +51,54 @@ document.addEventListener('DOMContentLoaded', function() {
     // Generate the calendar for the current month and year
     generateCalendar(currentMonth, currentYear);
 });
-// Lazy loading images using IntersectionObserver
-document.addEventListener('DOMContentLoaded', function() {
-    const lazyloadImages = document.querySelectorAll('.lazyload');
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.getAttribute('data-src');
-                img.classList.remove('lazyload');
-                observer.unobserve(img);
-            }
-        });
-    });
 
-    lazyloadImages.forEach(image => {
-        observer.observe(image);
-    });
-});
-// Last visit message using localStorage
+// Function to handle last visit message
 function getLastVisitMessage() {
     const lastVisitKey = 'lastVisit';
     const currentVisitTime = Date.now();
-    const lastVisitTime = localStorage.getItem(lastVisitKey);
-    const messageElement = document.createElement('p');
-    
-    if (lastVisitTime) {
-        const lastVisitDate = new Date(parseInt(lastVisitTime));
-        const timeDiff = currentVisitTime - lastVisitDate.getTime();
-        const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); // Convert time difference to days
-            if (daysDiff < 1) {
-                messageElement.textContent = "Back so soon! Awesome!";
-            } else if (daysDiff === 1) {
-                messageElement.textContent = "You last visited 1 day ago.";
-            } else {
-                messageElement.textContent = `You last visited ${daysDiff} days ago.`;
-            }
+    const lastVisit = localStorage.getItem(lastVisitKey);
+    const visitMessage = document.getElementById('last-visit-message');
+
+    if (lastVisit) {
+        const lastVisitTime = parseInt(lastVisit, 10);
+        const timeDiff = currentVisitTime - lastVisitTime;
+        const daysSinceLastVisit = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+        if (daysSinceLastVisit === 0) {
+            visitMessage.textContent = 'Welcome back! You last visited today.';
         } else {
-            messageElement.textContent = "Welcome! Let us know if you have any questions.";
+            visitMessage.textContent = `Welcome back! Your last visit was ${daysSinceLastVisit} day(s) ago.`;
         }
-        
-        // Update localStorage with the current visit time
-        localStorage.setItem(lastVisitKey, currentVisitTime);
-        
-        // Append the message to the sidebar or any appropriate area
-        const sidebar = document.querySelector('.sidebar .about');
-        sidebar.appendChild(messageElement);
+    } else {
+        visitMessage.textContent = 'Welcome! This is your first visit.';
     }
+
+    // Store the current visit time
+    localStorage.setItem(lastVisitKey, currentVisitTime.toString());
+}
+
+// Lazyload implementation
+document.addEventListener('DOMContentLoaded', function() {
+    // Lazy load images
+    const lazyloadImages = document.querySelectorAll('.lazyload');
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazyload');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        lazyloadImages.forEach(function(image) {
+            observer.observe(image);
+        });
+    }
+
+    // Call the last visit message function
+    getLastVisitMessage();
+});
