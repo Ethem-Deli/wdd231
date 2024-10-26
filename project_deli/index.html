@@ -58,9 +58,15 @@
                     </a>
                 </li>
                 <li class="list">
-                    <a href="#about">
+                    <a href="about.html">
                         <span class="nav-icon"><i class="fa fa-info-circle"></i></span>
-                        <span class="text">About</span>
+                        <span class="text">About Us</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="myfinance.html">
+                        <span class="nav-icon"><i class="fa fa-wallet"></i></span>
+                        <span class="text">Manage My Personal Finances</span>
                     </a>
                 </li>
                 <li class="list">
@@ -79,7 +85,8 @@
                 <li><a href="#budget-tools">Budget Tools</a></li>
                 <li><a href="#meal-planning">Meal Plan</a></li>
                 <li><a href="#investment-tips">Investments</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="about.html">About Us/a></li>
+                <li><a href="managefinance.html">Manage My Personal Finances</a></li>
                 <li><a href="siteplan-document.html">Site Plan Document</a></li>
             </ul>
         </nav>
@@ -111,8 +118,8 @@
                 <!-- Budgeting Image Box -->
                 <div class="image-box budgeting-box">
                     <img src="images/budgeting.jpg" alt="Budgeting Image">
-                    <p>Budgeting Tips</p>
-                </div>
+                    <p><a href="budgeting.html">Budgeting Tips</a></p>
+                    </div>
             </div>
         </section>
 
@@ -143,7 +150,8 @@
                 <!-- Meal Planning Image Box -->
                 <div class="image-box meal-planning-box">
                     <img src="images/meal-planning.jpg" alt="Meal Planning Image">
-                    <p>Meal Planning for Families</p>
+                    
+                    <p><a href="mealplan.html">Meal Planning for Families</a></p>
                 </div>
             </div>
         </section>
@@ -151,7 +159,10 @@
         <!-- Investment Tips Section-->
             <section id="investment-tips">
                 <h2>Investment Tips</h2>
-                <div id="investment-data">
+                <!--<div id="investment-data"></div>-->
+                    <div id="tipsContainer">
+                        <!-- Random tips will be displayed here -->
+                    </div>
                 <!-- Data fetched from finance API will display here -->
                     <!-- Investment Tips Section if jsona and scripts will not being used-->            
                     <!--       </div>-->
@@ -174,7 +185,11 @@
                 <div class="wireframe-box">Footer Area</div>
             </div>
         </section>
+        <input type="text" id="userInput" placeholder="Enter some text" />
+        <button onclick="saveUserInput()">Save</button>
+        <button onclick="loadUserInput()">Load</button>
     </main>
+
 
     <!-- Footer -->
     <footer>
@@ -183,8 +198,8 @@
             <p>Doha, Qatar The Pearl, 974</p>
             <p>Email: info@budgetproplus.com | Phone: (974) 5060-6655</p>
             <ul class="footer-links">
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="policy.html">Privacy Policy</a></li>
             </ul>
         </div>
         <div class="wrapper">

@@ -315,14 +315,14 @@ footer {
     color: #333;
 }
 
-#investment-data p {
+#tipsContainer p {
     background-color: rgba(231, 111, 81, 0.2); /* Highlight tips */
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-#investment-data p:hover {
+#tipsContainer p:hover {
     background-color: rgba(231, 111, 81, 0.5); /* Slight hover effect */
 }
 

@@ -1,5 +1,4 @@
 
-
 // JavaScript for toggling the mobile nav and hamburger animation
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const mobileNav = document.getElementById('mobile-nav');
@@ -8,8 +7,6 @@ hamburgerMenu.addEventListener('click', () => {
     hamburgerMenu.classList.toggle('active');
     mobileNav.classList.toggle('active');
 });
-
-
 
 // Set current year and last modified date in the footer
 const year = new Date().getFullYear();
@@ -36,4 +33,18 @@ function setActiveLink() {
 // Add click event to each menu item
 listItems.forEach(item => {
   item.addEventListener('click', setActiveLink);
+});
+
+//FOR BUDGETING MENU
+document.querySelectorAll('.dropdown-mobile > a').forEach(menu => {
+  menu.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevent default link behavior
+      const dropdown = menu.nextElementSibling;
+      dropdown.classList.toggle('active');
+  });
+});
+
+// Toggle mobile navigation
+document.getElementById('hamburger-menu').addEventListener('click', () => {
+  document.getElementById('mobile-nav').classList.toggle('active');
 });

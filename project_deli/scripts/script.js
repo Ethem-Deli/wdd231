@@ -15,6 +15,7 @@ document.getElementById('budget-form').addEventListener('submit', function(e) {
     localStorage.setItem('budget', JSON.stringify({ income, expenses, savingsGoal }));
 });
 
+
 // Meal Planning Form Functionality
 document.getElementById('meal-form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -34,6 +35,7 @@ document.getElementById('meal-form').addEventListener('submit', function(e) {
     familyData.push({ name, height, weight, age, caloriesNeeded });
     localStorage.setItem('family', JSON.stringify(familyData));
 });
+
 
 // JavaScript for toggling the mobile nav and hamburger animation
 const hamburgerMenu = document.getElementById('hamburger-menu');
@@ -72,3 +74,17 @@ function setActiveLink() {
 listItems.forEach(item => {
   item.addEventListener('click', setActiveLink);
 });
+function saveUserInput() {
+  const input = document.getElementById('userInput').value;
+  localStorage.setItem('userInput', input);  // Store input
+  alert('Input saved!');
+}
+
+function loadUserInput() {
+  const savedInput = localStorage.getItem('userInput');  // Retrieve input
+  if (savedInput) {
+      alert('Saved input: ' + savedInput);
+  } else {
+      alert('No input saved');
+  }
+}

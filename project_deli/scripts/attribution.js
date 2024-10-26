@@ -8,3 +8,5 @@ fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${sym
         // Handle and display the data on your page
     })
     .catch(error => console.error('Error fetching data:', error));
+
+    
