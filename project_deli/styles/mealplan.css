@@ -86,24 +86,24 @@ h1 {
 
 .section {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
+    gap: 20px;
 }
 
+/* Default: Image on the left, text on the right */
 .section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 15px;
+    width: 45%;
+    border-radius: 8px;
 }
 
 .section p {
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.8;
-    margin: 10px 0;
-    max-width: 90%;
+    width: 45%;
+    line-height: 1.6;
+}
+
+/* Alternate: Image on the right, text on the left */
+.section:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 /* Responsive Layout */
@@ -132,14 +132,17 @@ h1 {
     .menu li {
         margin: 10px 0;
     }
+
     .section {
-        flex-direction: row;
-        text-align: left;
+        flex-direction: column;
+        /* Stack items vertically on small screens */
+        text-align: center;
     }
 
-    .section p {
-        max-width: 60%;
-        margin-right: 20px;
+    .section p,
+    .section img {
+        width: 100%;
+        /* Full width on mobile */
     }
 }
 
