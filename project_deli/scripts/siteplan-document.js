@@ -44,7 +44,3 @@ document.querySelectorAll('.dropdown-mobile > a').forEach(menu => {
   });
 });
 
-// Toggle mobile navigation
-document.getElementById('hamburger-menu').addEventListener('click', () => {
-  document.getElementById('mobile-nav').classList.toggle('active');
-});
