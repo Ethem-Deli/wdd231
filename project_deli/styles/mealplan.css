@@ -17,6 +17,9 @@ nav {
     background-color: #007BFF;
     padding: 10px 20px;
     color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar {
@@ -99,6 +102,8 @@ h1 {
 .section p {
     width: 45%;
     line-height: 1.6;
+    padding: 10px;
+    max-width: 400px;
 }
 
 /* Alternate: Image on the right, text on the left */
@@ -141,7 +146,7 @@ h1 {
 
     .section p,
     .section img {
-        width: 100%;
+        width: 90%;
         /* Full width on mobile */
     }
 }
@@ -152,4 +157,10 @@ footer {
     padding: 20px;
     font-size: 0.9em;
     color: #aaa;
+}
+/* Footer Links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }

@@ -459,12 +459,12 @@ footer {
 /* Responsive Layout for Smaller Screens */
 @media (max-width: 768px) {
     #crypto-grid {
-        grid-template-columns: 1fr 1fr; /* 2 columns for tablets */
+        grid-template-columns: 2fr 1fr; /* 2 columns for tablets */
     }
 }
 
 @media (max-width: 480px) {
     #crypto-grid {
-        grid-template-columns: 1fr; /* 1 column for mobile devices */
+        grid-template-columns: 3fr ; /* 2 column for mobile devices */
     }
 }
