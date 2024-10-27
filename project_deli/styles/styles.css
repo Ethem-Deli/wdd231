@@ -409,14 +409,15 @@ footer {
 #crypto-container h2 {
     font-size: 24px;
     color: #333;
+    background-color: aqua;
     margin-bottom: 20px;
 }
 
 /* Grid setup for crypto items */
 #crypto-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 columns */
-    gap: 20px; /* Space between items */
+    grid-template-columns: repeat(9, 1fr); /* 5 columns */
+    gap: 10px; /* Space between items */
     justify-items: center;
 }
 

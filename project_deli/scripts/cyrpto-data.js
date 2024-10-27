@@ -2,8 +2,8 @@
 async function loadCryptoData() {
     const cryptoGrid = document.getElementById("crypto-grid");
 
-    // CoinGecko API URL for top cryptocurrencies
-    const apiUrl = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=9&page=1&sparkline=false";
+    // Updated API URL to fetch 12 items
+    const apiUrl = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=27&page=1&sparkline=false";
 
     try {
         const response = await fetch(apiUrl);
