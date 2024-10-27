@@ -36,3 +36,10 @@ app.post('/save-meal', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
+fs.writeFile('data.json', JSON.stringify(jsonData, null, 2), (err) => {
+    if (err) {
+        console.error('Error saving data:', err);
+        return res.status(500).send('Error saving data');
+    }
+    res.send('Data saved successfully');
+});
