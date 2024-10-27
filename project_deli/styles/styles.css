@@ -355,7 +355,7 @@ footer {
 }
 .image-box.investment-tips-box img {
     width: 100%;
-    max-width: auto; /* Adjust to the desired max width */
+    max-width: 100%; /* Adjust to the desired max width */
     height: 500px;
     border-radius: 8px;
     padding: 10px;
