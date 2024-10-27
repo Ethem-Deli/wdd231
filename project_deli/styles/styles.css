@@ -456,15 +456,14 @@ footer {
     color: #666;
 }
 
-/* Responsive Layout for Smaller Screens */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     #crypto-grid {
-        grid-template-columns: 2fr 1fr; /* 2 columns for tablets */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     #crypto-grid {
-        grid-template-columns: 3fr ; /* 2 column for mobile devices */
+        grid-template-columns: 1fr; /* Single column on very small screens */
     }
 }
